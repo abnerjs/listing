@@ -8,6 +8,19 @@ import { UserService } from '../services/user.service';
 })
 export class HomePage {
 
-  constructor(private service: UserService) {}
+  public usuarios: any[] = [];
+  private pagina = 1;
 
+  constructor(private service: UserService) {
+    this.buscarUsuarios();
+  }
+
+  buscarUsuarios() {
+    this.service.buscar(this.pagina).subscribe(
+      (dados: any) => {
+        console.log(dados);
+        this.usuarios = dados.data;
+      }
+    );
+  }
 }

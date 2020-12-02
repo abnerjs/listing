@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
+  private base = 'https://reqres.in/api';
 
   constructor(private http: HttpClient) { }
 
-  buscar() {
-    return this.http.get('http://reqres.in/api/users?page=2');
+  buscar(pagina: number) {
+    return this.http.get(`${this.base}/users?page=${pagina}`);
   }
-
 
 }
