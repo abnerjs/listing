@@ -28,10 +28,16 @@
   </div>
   <ion-row id='navigatorButtons'>
     <ion-col size="6">
-      <ion-button expand="full" color="primary">Anterior</ion-button>
+      <ion-button expand="full" color="primary">
+        <ion-label>Anterior</ion-label>
+        <ion-icon slot='start' name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button expand="full" color="primary">Próximo</ion-button>
+      <ion-button expand="full" color="primary">
+        <ion-label>Próximo</ion-label>
+        <ion-icon slot='end' name="arrow-forward-circle-outline"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
